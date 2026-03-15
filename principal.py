@@ -13,13 +13,13 @@ def menu():                             #se crea el menu
             opcion = int(input("Seleccione una opcion: "))
             if opcion == 1:
                 registrar_gasto()
-                break
+            
             elif opcion == 2:
-                    print("YEISON")
-                    break
+                calculo()
+            
             elif opcion == 3:
                  print("DENIS")
-                 break
+            
             else:
                 print("Opcion invalida")
 
@@ -40,8 +40,27 @@ def registrar_gasto():
     gastos.append(flujo)
 
     print("Gasto registrado correctamente.")
-    print(gastos)
+    
 
+#Camilo Celis Hernandez (Modulo de calculo)
+
+def calculo():
+    
+
+    if len(gastos) == 0:
+        print("No hay gastos registrados.")
+        return
+    
+    total = 0
+
+    for gasto in gastos:
+        total = total + gasto["valor"]
+        print(f"Placa: {gasto['placa']} | Concepto: {gasto['concepto']} | Valor: {gasto['valor']}")
+    print("El gasto total acumulado es:", total)
+    
+
+ 
+     
 if __name__ == "__main__":
     menu()
 
