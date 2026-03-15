@@ -56,7 +56,7 @@ def calculo():
     for gasto in gastos:
         total = total + gasto["valor"]
         print(f"Placa: {gasto['placa']} | Concepto: {gasto['concepto']} | Valor: {gasto['valor']}")
-    print("El gasto total acumulado es:", total)
+    print("El gasto total acumulado es: $", total)
     
 
  
