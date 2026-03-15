@@ -18,7 +18,7 @@ def menu():                             #se crea el menu
                 calculo()
             
             elif opcion == 3:
-                 print("DENIS")
+                 buscar_por_placa()
             
             else:
                 print("Opcion invalida")
@@ -57,6 +57,24 @@ def calculo():
         total = total + gasto["valor"]
         print(f"Placa: {gasto['placa']} | Concepto: {gasto['concepto']} | Valor: {gasto['valor']}")
     print("El gasto total acumulado es: $", total)
+
+#denis camilo (busqueda)
+
+def buscar_por_placa():
+
+    placa_buscar = input("Ingrese la placa a buscar: ")
+
+    encontrado = False
+
+    for gasto in gastos:
+        if gasto["placa"] == placa_buscar:
+            print("Concepto:", gasto["concepto"])
+            print("Valor:", gasto["valor"])
+            print("------------------")
+            encontrado = True
+
+    if not encontrado:
+        print("No se encontraron gastos para esa placa.")
     
 
  
